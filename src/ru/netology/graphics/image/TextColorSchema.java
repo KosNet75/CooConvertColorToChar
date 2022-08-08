@@ -1,5 +1,5 @@
 package ru.netology.graphics.image;
 
-public interface TextColorSchema {
+public interface TextColorSchema  {
     char convert(int color);
 }
