@@ -109,11 +109,18 @@ public class Converter implements TextGraphicsConverter {
       if (resH > resW) {
         maxRes = resH;
       }
+
       newWidth = img.getWidth() / maxRes;
       newHeight = img.getHeight() / maxRes;
     } else {
       newWidth = img.getWidth();
       newHeight = img.getHeight();
+    }
+    if (newWidth<=1){
+      newWidth =1;
+    }
+    if (newHeight<=1){
+      newHeight =1;
     }
     System.out.println(
         " высота ограничения GServ " + height + "  ширина ограничения GServ " + width);
@@ -138,9 +145,11 @@ public class Converter implements TextGraphicsConverter {
     graphics.drawImage(scaledImage, 0, 0, null);
     var bwRaster = bwImg.getRaster();
 
+
+    int[] pixel = null;
     for (int h = 0; h < newHeight; h++) {
       for (int w = 0; w < newWidth; w++) {
-        int color = bwRaster.getPixel(w, h, new int[3])[0];   //???????
+        int color = bwRaster.getPixel(w, h, pixel)[0];   //???????
         char pix = schema.convert(color);
         graph[h][w] = pix;
       }

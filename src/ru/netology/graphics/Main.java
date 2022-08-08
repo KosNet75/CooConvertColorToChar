@@ -2,7 +2,6 @@ package ru.netology.graphics;
 
 
 import ru.netology.graphics.image.Converter;
-
 import ru.netology.graphics.image.TextGraphicsConverter;
 import ru.netology.graphics.server.GServer;
 
@@ -17,8 +16,8 @@ public class Main {
 
         GServer server = new GServer(converter); // Создаём объект сервера
 
-        converter.setMaxHeight(60);
-        converter.setMaxWidth(80);
+        converter.setMaxHeight(1);
+        converter.setMaxWidth(1);
         converter.setMaxRatio(1);
 
         server.start(); // Запускаем
@@ -36,37 +35,7 @@ public class Main {
       System.out.println(imgTxt);
     }
 
-
 }
 
-
-
-
-
-
-
-
-
-
-
-//      try {
-//        test(new StringBuffer(""));
-//        test(new StringBuilder(""));
-//      } catch (java.io.IOException e) {
-//        System.err.println(e.getMessage());
-//      }
-//    }
-//  private static void test(Appendable obj) throws java.io.IOException {
-//    // узнаем текущее время до теста
-//    long before = System.currentTimeMillis();
-//    for (int i = 0; i++ < 1e9; ) {
-//      obj.append("");
-//    }
-//    // узнаем текущее время после теста
-//    long after = System.currentTimeMillis();
-//    // выводим результат
-//    System.out.println(obj.getClass().getSimpleName() + ": " + (after - before) + "ms.");
-//  }
-//}
 
 
