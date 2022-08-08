@@ -7,6 +7,7 @@ import ru.netology.graphics.image.TextGraphicsConverter;
 import ru.netology.graphics.server.GServer;
 
 
+
 public class Main {
     public static void main(String[] args) throws Exception {
 
