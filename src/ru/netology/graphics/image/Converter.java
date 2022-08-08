@@ -153,4 +153,4 @@ public class Converter implements TextGraphicsConverter {
 
 
 //    java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
-//    at java.desktop/java.awt.image.ComponentSampleModel.getPixel(ComponentSampleModel.java:733)
+ //at java.desktop/java.awt.image.ComponentSampleModel.getPixel(ComponentSampleModel.java:733)
